@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Listagem de Salário</title>
+	
+	<h:outputStylesheet library="testeCSS" name="estilo.css"/>
+
+	<f:metadata>
+		<f:viewAction action="#{listagemSalarioBean.listarSalario}"/>
+	</f:metadata>
+</h:head>
+<h:body>
+	<header>
+		<h1>Teste Técnico - Listagem de Salários</h1>
+	</header>
+
+	<DIV id="conteudo">
+		<p:dataTable value="#{listagemSalarioBean.listaSalario}" var="listaSalario" emptyMessage="Nada a se exibir" id="table">
+			
+			<p:column headerText="Pessoa_ID" >
+				<h:outputText value="#{listaSalario.pessoa_id.id}"/>
+			</p:column>
+			<p:column headerText="Nome" >
+				<h:outputText value="#{listaSalario.pessoa}"/>
+			</p:column>
+			<p:column headerText="Cargo">
+				<h:outputText value="#{listaSalario.cargo}"/>
+			</p:column>
+			<p:column headerText="Salário">
+				<h:outputText value="#{listaSalario.salario}"/>
+			</p:column>
+		
+		</p:dataTable>
+		<h:form>
+			<h:commandButton update="table" value="calcular" actionListener="#{listagemSalarioBean.calcularSalarios}"></h:commandButton>
+		</h:form>
+		
+	</DIV>
+	
+	<footer>
+		<h3>Autor: Moisés C.</h3>
+	</footer>
+</h:body>
+</html>
