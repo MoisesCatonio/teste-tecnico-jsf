@@ -18,6 +18,9 @@ Projeto para fixação de conhecimentos sobre JSF, JPA, Primefaces e OO em Java.
       <a href="#documentação-relacionada-">Documentação relacionada</a>
     </li>
     <li>
+      <a href="#features-planejadas-e-feitas-">Features planejadas e feitas</a>
+    </li>
+    <li>
       <a href="#responsável-">Responsável</a>
     </li>
   </ul>
